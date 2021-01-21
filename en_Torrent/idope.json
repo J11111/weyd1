@@ -1,8 +1,8 @@
    {
   "name": "idope",
   "language": ["en"],
-  "domains": ["idope.py"],
-  "base_url": "https://idope.py",
+  "domains": ["idope.xyz"],
+  "base_url": "https://idope.xyz",
   "search_url_format_episode": {
     "string_format": "/search/%s+S%02dE%02d/1/",
     "replacement": [
