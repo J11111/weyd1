@@ -1,8 +1,8 @@
 {
   "name": "rarbg",
   "language": ["en"],
-  "domains": ["rarbg.to"],
-  "base_url": "https://rarbg.to",
+  "domains": ["rarbgprx.org"],
+  "base_url": "https://rarbgprx.org",
   "search_url_format_episode": {
     "string_format": "/search/%s+S%02dE%02d/1/",
     "replacement": [
