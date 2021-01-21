@@ -1,8 +1,8 @@
 {
   "name": nyaa",
   "language": ["en"],
-  "domains": ["nyaa.py"],
-  "base_url": "https://nyaa.py",
+  "domains": ["nyaa.si"],
+  "base_url": "https://nyaa.si",
   "search_url_format_episode": {
     "string_format": "/search/%s+S%02dE%02d/1/",
     "replacement": [
