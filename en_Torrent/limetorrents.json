@@ -1,7 +1,7 @@
 {
     "name": "limetorrents",
     "language": ["en"],
-    "domains": ["limetorrents.info"],
+    "domains": ["limetorrents.info","limetorrent.ws"],
     "base_url": "https://www.limetorrents.info",
     "search_url_format_episode": {
       "string_format": "/search/tv/%s+s%02de%02d/1/",
