@@ -2,7 +2,7 @@
     "name": "torrent9",
     "language": ["hi", "en"],
     "domains": ["torrent9.uno", "torrent9.to"],
-    "base_url": "https://torrent9.unblockit.ltd/",
+    "base_url": "https://torrent9.uno/",
     "search_url_format_episode": {
       "string_format": "",
       "replacement": [
