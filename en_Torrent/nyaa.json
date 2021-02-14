@@ -1,46 +1,87 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@J11111 
+Learn Git and GitHub without any code!
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+
+
+lalitjoshi06
+/
+Scrapers
+1
+21
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Scrapers/en_Torrent/nyaa.json
+@lalitjoshi06
+lalitjoshi06 Initial bringup
+Latest commit 8ef8933 2 days ago
+ History
+ 1 contributor
+53 lines (53 sloc)  1.34 KB
+ 
 {
-  "name": "nyaa",
-  "language": ["en"],
-  "domains": ["nyaa.si", "limetorrents.info"],
-  "base_url": "https://nyaa.si",
-  "search_url_format_episode": {
-    "string_format": "/search/%s+S%02dE%02d/1/",
-    "replacement": [
-      "title",
-      "season_int",
-      "episode_int"
-    ]
-  },
-  "search_url_format_movie": {
-    "string_format": "/search/%s+%04d/1/",
-    "replacement": [
-      "title",
-      "year_int"
-    ]
-  },
-  "more_pages_indicator": "<li class=\"last\">",
-  "next_page_path" : "div.pagination ul li.active + li a[href]",
-  "next_page_path_attr": "abs:href",
-  "links_on_first_page": false,
-  "drill_down_path": "tbody tr td a[href^=/torrent]",
-  "drill_down_path_attr": "abs:href",
-  "is_torrent": true,
-  "is_direct": false,
-  "links_container_path": "div.page-content",
-  "link_path": "",
-  "link_path_attr": "",
-  "title_path": "div.box-info-heading h1",
-  "title_path_attr": "",
-  "details_path": "|title_path|",
-  "details_path_attr": "",
-  "magnet_path": "div.torrent-detail-page div:eq(1) div ul:eq(0) li:eq(0) a",
-  "magnet_path_attr": "href",
-  "seeders_path": "",
-  "seeders_path_attr": "",
-  "filesize_path": "div.torrent-detail-page div:eq(1) div ul:eq(1) li:eq(3)",
-  "filesize_path_attr": "",
-  "quality_path": "|title_path|",
-  "quality_path_attr": "",
-  "info_path": "|title_path|",
-  "info_path_attr": ""
+	"name": "nyaa",
+	"language": ["en"],
+	"domains": ["nyaa.net", "nyaa.si"],
+	"base_url": "https://nyaa.si",
+	"search_url_format_episode": {
+		"string_format": "/?f=0&c=1_0&q=s+s%02de%02d&s=seeders&o=desc",
+		"replacement": [
+			"title_lower_dash",
+			"season_int",
+			"episode_int"
+		]
+	},
+	"search_url_format_movie": {
+		"string_format": "/?f=0&c=1_0&q=%s+%04d&s=seeders&o=desc",
+		"replacement": [
+			"title_lower",
+			"year_int"
+		]
+	},
+	"search_url_format_season_pack": {
+		"string_format": "/?f=0&c=1_0&q=%s&s=seeders&o=desc",
+		"replacement": [
+			"title_lower"
+		]
+	},
+	"more_pages_indicator": "",
+	"next_page_path": "",
+	"next_page_path_attr": "",
+	"links_on_first_page": true,
+	"drill_down_path": "",
+	"drill_down_path_attr": "",
+	"is_torrent": true,
+	"is_direct": false,
+	"links_container_path": "table.torrent-list tbody tr",
+	"link_path": "",
+	"link_path_attr": "",
+	"title_path": "td:eq(1) a[title]",
+	"title_path_attr": "",
+	"details_path": "|title_path|",
+	"details_path_attr": "",
+	"magnet_path": "td:eq(2) a[href^=magnet]",
+	"magnet_path_attr": "href",
+	"seeders_path": "td:eq(5)",
+	"seeders_path_attr": "",
+	"filesize_path": "td:eq(3)",
+	"filesize_path_attr": "",
+	"filesize_units": "",
+	"quality_path": "|title_path|",
+	"quality_path_attr": "",
+	"info_path": "|title_path|",
+	"info_path_attr": ""
 }
